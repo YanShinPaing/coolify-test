@@ -38,6 +38,10 @@ RUN chown -R www-data:www-data /var/www/html \
 #  COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 #  RUN chmod +x /usr/local/bin/entrypoint.sh
 
+# HEALTHCHECK FOR COOLIFY
+HEALTHCHECK --interval=10s --timeout=3s --start-period=5s --retries=3 \
+  CMD curl -f http://localhost:8000 || exit 1
+
 EXPOSE 8000
 
 CMD ["php","artisan","serve"]
