@@ -35,8 +35,8 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 storage bootstrap/cache
 
 #  RUN php artisan migrate:fresh
- COPY entrypoint.sh /usr/local/bin/entrypoint.sh
- RUN chmod +x /usr/local/bin/entrypoint.sh
+#  COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+#  RUN chmod +x /usr/local/bin/entrypoint.sh
 
 EXPOSE 8000
 
