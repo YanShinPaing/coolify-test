@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  /* Color Palette - Sky 600 as primary */
+  --color-primary: #0284c7;
+  --color-primary-hover: #0369a1;
+  --color-primary-light: #7dd3fc;
+  --color-primary-dark: #075985;
+
+  /* Custom spacing */
+  --spacing-section: 5rem;
+
+  /* Custom font sizes */
+  --font-size-hero: 3.5rem;
+  --font-size-section-title: 2.5rem;
+
+  /* Shadows */
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-card-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  @apply antialiased;
+}
+
+/* Custom Utilities */
+.btn-primary {
+  @apply bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-50 text-sky-600 font-semibold py-3 px-6 rounded-lg border-2 border-sky-600 transition-all duration-300;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-bold text-gray-900 mb-4;
+}
+
+.section-subtitle {
+  @apply text-xl text-gray-600 mb-12;
+}
+
+/* Gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+}
+
+.gradient-light {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hero section styles */
+.hero-pattern {
+  background-image:
+    linear-gradient(to right, rgb(226 232 240 / 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(226 232 240 / 0.1) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+}

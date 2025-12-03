@@ -1,0 +1,42 @@
+# Ignore node modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Composer vendor (we install inside the container)
+vendor
+
+# Environment files
+.env
+.env.backup
+.env.*.backup
+
+# Laravel cache
+bootstrap/cache/*.php
+storage/*.key
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE / Editor files
+*.swp
+*.swo
+*.idea
+*.vscode
+*.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Tests (optional, if not needed during build)
+# tests/
+
+# OS / System files
+Thumbs.db
