@@ -32,7 +32,7 @@ storage/framework/views/*
 *.DS_Store
 
 # Docker
-Dockerfile
+# Dockerfile
 docker-compose.yml
 
 # Tests (optional, if not needed during build)
